@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Insert employee details</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="Name">Employee Name</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Employee Name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="phone" placeholder="Enter Employee Phone number" name="phone">
+    </div>
+      <div class="form-group">
+      <label for="salary">Employee Salary</label>
+      <input type="number" class="form-control" id="salary" placeholder="Enter Employee Salary" name="salary">
+    </div>
+      <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="city" placeholder="Enter City Name" name="city">
+    </div>
+      <div class="form-group">
+      <label for="dept">Department Name</label>
+      <input type="text" class="form-control" id="dept" placeholder="Enter Employee Department Name" name="dept">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
